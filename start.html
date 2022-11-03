@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 -->
+    <div class="cp_01_wrapper chapter_model none_switch"> 
+        <div id="pic_monster" class = "pic_area">
+        <img src="img/okidohakase.jpeg" id="pic" alt="" >
+        <div class="text_box">
+            <div class="cp_01_text">
+                <h4 id="talker01">▶︎オーキド博士</h4>
+                <p id="conversation01">ようこそポケモンの世界へ。</p>
+            </div>
+            <a class="next_text_btn" id="next_text_btn_01"> >> </a> <!-- チャプター01storyのjsでスライド送り -->
+        </div>
+        </div>
+    </div>
+    
+    <div class="cp_02_wrapper chapter_model none_switch">
+        <div class="screen02 screen_model">
+            <!-- 複数行にわたってモニター的に表示させる際にjs側から引いてくる手段がわからないためhtml側で表示/非表示で切り替え？ -->
+            <!-- 下記の形式をjs側から持ってきてhtml側には記載しない手法を今後模索したい。 -->
+            <h4>▶︎説明◀︎</h4>
+            <p class="screen_text_model">個人投資家A・上場企業経営者B・ビリオネアC</p>
+            <p class="screen_text_model">以上の3名とのピッチバトルに勝利し、出資をGETしよう！</p>
+            <p class="screen_text_model">＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</p>
+            <p class="screen_text_model">-- ピッチバトル --</p>
+            <li class="screen_text_model"> ”かたる（攻撃）”</li>
+            <li class="screen_text_model"> ”エモいモーション（チャージ）”</li>
+            <li class="screen_text_model"> ”そなえる（防御）”</li>
+            <p class="screen_text_model">のいずれかを選択し、対戦相手の体力を0にした方が勝ちです。</p>
+            <p class="screen_text_model">※エモいモーション を行うと、次のこうげきがチャージ（こうげき*1.5倍）されます。</p>
+        </div>
+        <div class="operation02 operation_model">
+            <div class="text_box">
+                <a class="next_text_btn" id="next_text_btn_02"> >> </a>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/opning.js"></script>
+</body>
+</html>

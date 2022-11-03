@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="HP">
+        <h1 class="textBox text_center">仲間を選ぼう！</h1>
+    </div>
+    <!-- <input type="button" onclick="location.href='./index.html'" value="遷移"> -->
+    <!-- <button onclick="location.href='index.hthm'">冒険へ行く</button> -->
+    <div class="result_btn text_center" id="btn">
+        <a href="index.html" class="btn" id="btn" >冒険へ行く</a>
+    </div>
+   
+    <ul>
+        <li>
+            <div class="monster">
+                <p class="monster_text">ヒトカゲ</p>
+                <audio src="mp3/004_hitokage.wav" id="play-button_1"></audio>
+            </div>
+            <div class="monster_pic">
+                <img src="img/monster1.jpeg" id = "monster1" class="A" alt="">
+            </div>
+        </li>
+        <li>
+            <div class="monster_text">
+                <p class="monster">ゼニガメ</p>
+                <audio src="mp3/007_zenigame.wav" id="play-button_2"></audio>
+            </div>
+            <div class="monster_pic">
+                <img src="img/monster2.jpeg" id = "monster2" class="A" alt="">
+                <audio src="mp3/001_fushigidane.wav" id="play-button_3"></audio>
+            </div>
+        </li>
+        <li>
+            <div class="monster">
+                <p class="monster_text">フシギダネ</p>
+            </div>
+            <div class="monster_pic">
+                <img src="img/monster3.jpeg" id = "monster3" class="A" alt="">
+            </div>
+        </li>
+    </ul>
+    <script type="text/javascript" src="js/js"></script>
+</body>
+</html>
