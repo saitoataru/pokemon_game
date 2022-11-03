@@ -33,10 +33,6 @@ $('#next_text_btn_02').click(function (){
         // $('.cp_02_wrapper').show();
         };
     });
-// $('#save').click(function(){
-//     if()
-
-// });
 
 //名前の入力
     //save
@@ -63,4 +59,53 @@ $('#next_text_btn_02_03').on("click",function(){
     $('.cp_02_03_wrapper').hide();
     $('.cp_03_wrapper').show();
 });
+// ポケモンの選択
+    // ヒトカゲの処理
+$("#monster1").hover(
+    function(){
+    $("#monster1").css('width', '55%');},
+    function(){
+    $("#monster1").css('width', '50%');}
+);
+$("#monster1").on("click",function(){
+    $("#conversation_03_01").text("ヒトカゲ。君に決めた！");
+    localStorage.setItem("pokemon","ヒトカゲ")
+    $('.next_text_btn_03_01').show();
+});
+    // ゼニガメの処理
+$("#monster2").hover(
+    function(){
+    $("#monster2").css('width', '55%');},
+    function(){
+    $("#monster2").css('width', '50%');}
+);
+$("#monster2").on("click",function(){
+    $("#conversation_03_01").text("ゼニガメ。君に決めた！");
+    localStorage.setItem("pokemon","ゼニガメ");
+    $('.next_text_btn_03_01').show();
+});
+    //フシギダネの処理
+$("#monster3").hover(
+    function(){
+    $("#monster3").css('width', '55%');},
+    function(){
+    $("#monster3").css('width', '50%');}
+);
+$("#monster3").on("click",function(){
+    $("#conversation_03_01").text("フシギダネ。君に決めた！");
+    localStorage.setItem("pokemon","フシギダネ");
+    $('.next_text_btn_03_01').show();
+});
+// chapter03→chapter04
+$("#next_text_btn_03_01").on("click",function(){
+    $('.cp_03_wrapper').hide();
+    $('.cp_04_01_wrapper').show();
+});
 
+
+// 別の画面
+    // 戦いに行くを選択の場合
+$("#battle").on("click",function(){
+    $('.cp_04_01_wrapper').hide();
+    $('.cp_05_01_wrapper').show();
+});

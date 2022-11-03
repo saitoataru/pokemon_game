@@ -37,11 +37,21 @@ function enemy_action(){
     if(enemy_random_val%2===0){
         enemy_val = +20;
         enemyHp = enemyHp - enemy_val;
+        // 確認用console
         console.log("敵は"+enemyHp);
+        // バトルコメント
+        $("#comment_enemy").text("敵の回復。〇〇は"+enemy_val);
+        // HP表示
+        $("#enemyHp").text(enemyHp);
     }else {
         enemy_val = -20;
         enemyHp = enemyHp - enemy_val;
+        // 確認用console
         console.log("敵は"+enemyHp);
+         // バトルコメント
+         $("#comment_enemy").text("敵の攻撃。〇〇は"+enemy_val);
+        // HP表示
+        $("#enemyHp").text(enemyHp);
     }
 }
 
@@ -59,7 +69,8 @@ function applicantHandAttack() {
 }
 //モンスターの種類を定義
 function name_def(){
-    const name = "ヒトカゲ"  
+    const name = "ヒトカゲ" 
+    // ストレージから引っ張ってくる 
     return name;
 }  
 
@@ -88,31 +99,51 @@ function attackModel(){
     const monster = name_def(); //if分で名前を変更
     if(applicantAttack===5){
         mymonsterHp = mymonsterHp - applicantAttack;
+        // 確認用console
         console.log(monster+"は火炎放射＝")
         console.log(mymonsterHp);
         console.log("残りHPは"+mymonsterHp);
+        // バトルコメント
+        $("#comment_your").text(monster+"は火炎放射＝");
+        // HP表示
+        $("#yourHp").text(mymonsterHp);
         //敵の行動function入れる
         enemy_action();
 
     }else if(applicantAttack===0){
         mymonsterHp = mymonsterHp - applicantAttack;
+        // 確認用console
         console.log(monster+"はミスをした＝")
         console.log(mymonsterHp);
         console.log("残りHPは"+mymonsterHp);
+         // バトルコメント
+         $("#comment_your").text(monster+"はミスをした＝");
+        // HP表示
+        $("#yourHp").text(mymonsterHp);
          //敵の行動function入れる
          enemy_action();
     }else if(applicantAttack===30){
         mymonsterHp = mymonsterHp - applicantAttack;
+        // 確認用console
         console.log(monster+"は大車輪＝")
         console.log(mymonsterHp);
         console.log("残りHPは"+mymonsterHp);
+        // バトルコメント
+        $("#comment_your").text(monster+"は大車輪＝");
+        // HP表示
+        $("#yourHp").text(mymonsterHp);
          //敵の行動function入れる
          enemy_action();
     }else{
         mymonsterHp = mymonsterHp - applicantAttack;
+        // 確認用console
         console.log(monster+"は守る＝")
         console.log(mymonsterHp);
         console.log("残りHPは"+mymonsterHp);
+        // バトルコメント
+        $("#comment_your").text(monster+"は守る＝");
+        // HP表示
+        $("#yourHp").text(mymonsterHp);
          //敵の行動function入れる
          enemy_action();
     }
@@ -123,23 +154,38 @@ function recoveryModel(){
     const monster = name_def();
     if(recovery===10){
         mymonsterHp = mymonsterHp + recovery;
+        // 確認用console
         console.log(monster+"は"+recovery+"回復");
         console.log(mymonsterHp);
         console.log("残りHPは"+mymonsterHp);
+        // バトルコメント
+        $("#comment_your").text(monster+"は"+recovery+"pt回復");
+        // HP表示
+        $("#yourHp").text(mymonsterHp);
          //敵の行動function入れる
          enemy_action();
     }else if(recovery===5){
         mymonsterHp = mymonsterHp + recovery;
+        // 確認用console
         console.log(monster+"は"+recovery+"回復");
         console.log(mymonsterHp);
         console.log("残りHPは"+mymonsterHp);
+        // バトルコメント
+        $("#comment_your").text(monster+"は"+recovery+"pt回復");
+        // HP表示
+        $("#yourHp").text(mymonsterHp);
          //敵の行動function入れる
          enemy_action();
     }else if(recovery===0){
         mymonsterHp = mymonsterHp + recovery;
+        // 確認用console
         console.log(monster+"は"+recovery+"回復");
         console.log(mymonsterHp);
         console.log("残りHPは"+mymonsterHp);
+        // バトルコメント
+        $("#comment_your").text(monster+"は"+recovery+"pt回復");
+        // HP表示
+        $("#yourHp").text(mymonsterHp);
          //敵の行動function入れる
          enemy_action();
     }

@@ -41,9 +41,12 @@
     <!-- ポケモン選択 -->
     <div class="cp_03_wrapper" style="display:none;">
         <div class="cp_03_01_wrapper">
-            <p>〇〇。仲間を選ぼう！</p>
+            <p id="conversation_03_01">〇〇。仲間を選ぼう！</p>
+            <div class = "next_text_btn_03_01" style="display:none;">
+             <a class="next_text_btn_03_01" id="next_text_btn_03_01"> >> </a>
+            </div>
         </div>
-        <!-- ポケモン -->
+        <!-- ポケモン選択 -->
         <div class="cp_03_02_wrapper">
             <ul>
                 <li>
@@ -52,7 +55,7 @@
                         <audio src="mp3/004_hitokage.wav" id="play-button_1"></audio>
                     </div>
                     <div class="monster_pic">
-                        <img src="img/monster1.jpeg" id = "monster1" class="A" alt="">
+                        <img src="img/monster1.jpeg" id = "monster1" class="" alt="">
                     </div>
                 </li>
                 <li>
@@ -61,7 +64,7 @@
                         <audio src="mp3/007_zenigame.wav" id="play-button_2"></audio>
                     </div>
                     <div class="monster_pic">
-                        <img src="img/monster2.jpeg" id = "monster2" class="A" alt="">
+                        <img src="img/monster2.jpeg" id = "monster2" class="" alt="">
                         <audio src="mp3/001_fushigidane.wav" id="play-button_3"></audio>
                     </div>
                 </li>
@@ -70,20 +73,38 @@
                         <p class="monster_text">フシギダネ</p>
                     </div>
                     <div class="monster_pic">
-                        <img src="img/monster3.jpeg" id = "monster3" class="A" alt="">
+                        <img src="img/monster3.jpeg" id = "monster3" class="" alt="">
                     </div>
                 </li>
             </ul>
-
         </div>
-
     </div>
-   
+        <!-- 主人公のアクション -->
+        <div class="cp_04_01_wrapper" style="display:none;">
+            
+                    <P id="battle">戦いに行く</P>
+                    <p>戯れる</p>
+                    <p>寝る</p>
+        </div>
+        <!-- 選択肢①バトル -->
+        <div class="cp_05_01_wrapper" style="display:none;">
+            <p id="yourHp">100</p>  
+            <p id="enemyHp">100</p>                  
+                <li><button id="attack_click_1">戦う</button></li>
+                <li><button id="attack_click_2">回復する</button></li>
+                <li><button id="attack_click_3">粘る</button></li>
+            <!-- バトルの実況 -->
+            <div>
+                <p>▶︎あなた</p>
+                <p id="comment_your">アクションの選択をしよう</p>
+                <p>▶︎相手</p>
+                <p id="comment_enemy"></p>
 
-
-
+            </div>         
+        </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/opning.js"></script>
+<script src="js/fight.js"></script>
 </body>
 </html>
