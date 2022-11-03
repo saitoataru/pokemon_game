@@ -1,5 +1,6 @@
 // chapter01＿オオキド博士
 let chapter01_story = 1;
+
 $('#next_text_btn_01').click(function (){
         console.log(chapter01_story);
     if (chapter01_story === 1) {
