@@ -9,9 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 1 -->
-    <div class="cp_01_wrapper chapter_model none_switch"> 
-        <div id="pic_monster" class = "pic_area">
+    <!-- オオキド博士のコメント -->
+    <div class="cp_01_wrapper"> 
         <img src="img/okidohakase.jpeg" id="pic" alt="" >
         <div class="text_box">
             <div class="cp_01_text">
@@ -20,21 +19,66 @@
             </div>
             <a class="next_text_btn" id="next_text_btn_01"> >> </a> <!-- チャプター01storyのjsでスライド送り -->
         </div>
+    </div>
+    <!-- 名前入力 -->
+    <div class="cp_02_wrapper">
+        <div class="cp_02_01_wrapper">
+            <p id="conversation02">そして、僕のポケモンとの旅は始まった・・・</p>
+            <a class="next_text_btn" id="next_text_btn_02"> >> </a>
+        </div>
+        <div class="cp_02_02_wrapper" style="display: none;">
+            <input type ="text" id="text_area" required></textarea>
+            <ul>
+                <li id="save">保存する</li>
+                <li id="clear">やり直す</li>
+            </ul>
+        </div>
+        <div class ="cp_02_03_wrapper" style="display: none;">
+            <p id="conversation03">よろしく〇〇。ポケモンを選ぼう</p>
+            <a class="next_text_btn" id="next_text_btn_02_03"> >> </a>
         </div>
     </div>
-    
-    <div class="cp_02_wrapper chapter_model none_switch">
-        <div class="screen02 screen_model">
-            <!-- 複数行にわたってモニター的に表示させる際にjs側から引いてくる手段がわからないためhtml側で表示/非表示で切り替え？ -->
-            <!-- 下記の形式をjs側から持ってきてhtml側には記載しない手法を今後模索したい。 -->
-            <p class="screen_text_model">そして、僕のポケモンとの旅は始まった・・・</p>
+    <!-- ポケモン選択 -->
+    <div class="cp_03_wrapper" style="display:none;">
+        <div class="cp_03_01_wrapper">
+            <p>〇〇。仲間を選ぼう！</p>
         </div>
-        <div class="operation02 operation_model">
-            <div class="text_box">
-                <a class="next_text_btn" id="next_text_btn_02"> >> </a>
-            </div>
+        <!-- ポケモン -->
+        <div class="cp_03_02_wrapper">
+            <ul>
+                <li>
+                    <div class="monster">
+                        <p class="monster_text">ヒトカゲ</p>
+                        <audio src="mp3/004_hitokage.wav" id="play-button_1"></audio>
+                    </div>
+                    <div class="monster_pic">
+                        <img src="img/monster1.jpeg" id = "monster1" class="A" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="monster_text">
+                        <p class="monster">ゼニガメ</p>
+                        <audio src="mp3/007_zenigame.wav" id="play-button_2"></audio>
+                    </div>
+                    <div class="monster_pic">
+                        <img src="img/monster2.jpeg" id = "monster2" class="A" alt="">
+                        <audio src="mp3/001_fushigidane.wav" id="play-button_3"></audio>
+                    </div>
+                </li>
+                <li>
+                    <div class="monster">
+                        <p class="monster_text">フシギダネ</p>
+                    </div>
+                    <div class="monster_pic">
+                        <img src="img/monster3.jpeg" id = "monster3" class="A" alt="">
+                    </div>
+                </li>
+            </ul>
+
         </div>
+
     </div>
+   
 
 
 
